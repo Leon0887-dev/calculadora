@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="fundo">
+        <h1>Leon Guilherme</h1>
+        <div class="calculadora">
+            <h2>calculadora</h2>
+            <p id="resultado"></p>
+            <table>
+                <tr> <!--linhas-->
+                    <td><button onclick="clean()">C</button></td>   <!--colunas-->
+                    <td><button onclick="back()"> < </button></td>   
+                    <td><button onclick="isert('/')">/</button></td>   
+                    <td><button onclick="isert('*')"> x </button></td>   
+                </tr>
+                <tr> <!--linhas-->
+                    <td><button onclick="isert('7')">7</button></td>   <!--colunas-->
+                    <td><button onclick="isert('8')"> 8 </button></td>   
+                    <td><button onclick="isert('9')">9</button></td>   
+                    <td><button onclick="isert('-')"> - </button></td>   
+                </tr>
+                <tr> <!--linhas-->
+                    <td><button onclick="isert('4')">4</button></td>   <!--colunas-->
+                    <td><button onclick="isert('5')"> 5 </button></td>   
+                    <td><button onclick="isert('6')">6</button></td>   
+                    <td><button onclick="isert('+')"> + </button></td>   
+                </tr>
+                <tr> <!--linhas-->
+                    <td><button onclick="isert('1')">1</button></td>   <!--colunas-->
+                    <td><button onclick="isert('2')"> 2 </button></td>   
+                    <td><button onclick="isert('3')">3</button></td>   
+                    <td rowspan="2" ><button style="height:106px;" onclick="calcular()"> = </button></td>   
+                </tr>
+                <tr> <!--linhas-->
+                    <td colspan="2"><button style="width:106px;" onclick="isert('0')">0</button></td>   <!--colunas-->
+                       
+                    <td><button onclick="isert('.')">.</button></td>   
+                      
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
