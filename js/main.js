@@ -1,22 +1,23 @@
-function isert(num){
-    let numero = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = numero + num
-}
 
-function clean(){
-    document.getElementById('resultado').innerHTML = "";
-}
+document.querySelectorAll('.numero').forEach(item =>{
+     item.addEventListener('click', e => document.querySelector('#resultado').append(item.innerHTML));
+})
 
-function back(){
-    let resultado = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
-}
+document.querySelector('.apagar').addEventListener('click', e =>{
+      let valor = document.querySelector('#resultado').innerHTML;
+    document.querySelector('#resultado').innerHTML = valor.slice(0, -1);
+})
 
-function calcular(){
-    let resultado = document.getElementById('resultado').innerHTML;
-    if (resultado){document.getElementById('resultado').innerHTML = eval(resultado);
-}else{
-    document.getElementById('resultado').innerHTML = 'nada...'
-}
-         
-}
+
+
+document.querySelector('.limpar').addEventListener('click', e => document.querySelector('#resultado').innerHTML = ' ');
+
+document.querySelector('.igual').addEventListener('click', e =>{
+    let valor = document.querySelector('#resultado').innerHTML;
+    try{
+        document.querySelector('#resultado').innerHTML = eval(valor);
+    }catch{
+        document.querySelector('#resultado').innerHTML = '';
+    }
+          
+})
